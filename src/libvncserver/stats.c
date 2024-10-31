@@ -86,7 +86,7 @@ char *messageNameClient2Server(uint32_t type, char *buf, int len) {
                                       snprintf(buf, len, "MulticastFBUpdNACK"); break;
     case rfbSetDesktopSize:           snprintf(buf, len, "SetDesktopSize"); break;
     default:
-        snprintf(buf, len, "cli2svr-0x%08X", type);
+        snprintf(buf, len, "cli2svr-0x%08X", (unsigned int)type);
 
 
     }
@@ -162,7 +162,7 @@ char *encodingName(uint32_t type, char *buf, int len) {
 
 
     default:
-        snprintf(buf, len, "Enc(0x%08X)", type);
+        snprintf(buf, len, "Enc(0x%08X)", (unsigned int)type);
     }
 
     return buf;
