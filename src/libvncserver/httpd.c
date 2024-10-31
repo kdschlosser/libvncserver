@@ -23,6 +23,8 @@
  *  USA.
  */
 
+#if ENABLE_LIBVNCSERVER_HTTPD
+
 #ifdef __STRICT_ANSI__
 #define _BSD_SOURCE
 #define _POSIX_SOURCE
@@ -670,3 +672,4 @@ validateString(char *str)
     return TRUE;
 }
 
+#endif /* ENABLE_LIBVNCSERVER_HTTPD */

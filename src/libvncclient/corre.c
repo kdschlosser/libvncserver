@@ -26,6 +26,7 @@
  * encoded rectangle with BPP bits per pixel.
  */
 
+#ifdef
 #define HandleCoRREBPP CONCAT2E(HandleCoRRE,BPP)
 #define CARDBPP CONCAT3E(uint,BPP,_t)
 

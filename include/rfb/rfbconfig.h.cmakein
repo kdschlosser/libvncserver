@@ -3,6 +3,15 @@
  
 /* rfb/rfbconfig.h. Generated automatically by cmake. */
 
+/* Enable server */
+#cmakedefine ENABLE_LIBVNCSERVER  1
+
+/* Enable client */
+#cmakedefine ENABLE_LIBVNCCLIENT  1
+
+/* Enable httpd server */
+#cmakedefine ENABLE_LIBVNCSERVER_HTTPD  1
+
 /* Enable 24 bit per pixel in native framebuffer */
 #cmakedefine LIBVNCSERVER_ALLOW24BPP  1 
 

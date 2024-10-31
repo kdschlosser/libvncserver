@@ -32,6 +32,8 @@
  * @file rfbclient.h
  */
 
+#if ENABLE_LIBVNCCLIENT
+
 #ifdef WIN32
 #define WIN32_LEAN_AND_MEAN /* Prevent loading any Winsock 1.x headers from windows.h */
 #ifdef _MSC_VER
@@ -914,6 +916,8 @@ rfbBool rfbProcessServerMessage(rfbClient* client, int timeout);
 #if(defined __cplusplus)
 }
 #endif
+
+#endif /* ENABLE_LIBVNCCLIENT */
 
 /**
  * @}

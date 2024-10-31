@@ -38,6 +38,7 @@ extern "C"
 {
 #endif
 
+#if ENABLE_LIBVNCSERVER
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -63,6 +64,7 @@ typedef UINT32 in_addr_t;
 #pragma warning(disable:4996)
 #endif
 #endif
+
 
 #include <rfb/threading.h>
 
@@ -1198,6 +1200,7 @@ extern rfbBool rfbSendTextChatMessage(rfbClientPtr cl, uint32_t length, char *bu
 rfbBool rfbProcessNewConnection(rfbScreenInfoPtr rfbScreen);
 rfbBool rfbUpdateClient(rfbClientPtr cl);
 
+#endif /* ENABLE_LIBVNCSERVER */
 
 #if(defined __cplusplus)
 }
