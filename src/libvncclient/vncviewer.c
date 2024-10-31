@@ -46,6 +46,8 @@
 
 static void Dummy(rfbClient* client) {
 }
+static void DummyKeyboardState(rfbClient* client, int x, int y) {
+}
 static rfbBool DummyPoint(rfbClient* client, int x, int y) {
   return TRUE;
 }
@@ -341,7 +343,7 @@ rfbClient* rfbGetClient(int bitsPerSample,int samplesPerPixel,
   client->MallocFrameBuffer = MallocFrameBuffer;
   client->Bell = Dummy;
   client->CurrentKeyboardLedState = 0;
-  client->HandleKeyboardLedState = (HandleKeyboardLedStateProc)DummyPoint;
+  client->HandleKeyboardLedState = DummyKeyboardState;
   client->QoS_DSCP = 0;
 
   client->authScheme = 0;
