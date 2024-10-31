@@ -88,7 +88,8 @@ listenForIncomingConnections(rfbClient* client)
     int r;
     /* reap any zombies */
     int status, pid;
-    while ((pid= wait4(-1, &status, WNOHANG, (struct rusage *)0))>0);
+
+    while ((pid= waitpid(-1, &status, WNOHANG))>0);
 
     /* TODO: callback for discard any events (like X11 events) */
 
